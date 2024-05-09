@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![end if]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![end if]-->
+
+<head>
+	<meta charset="utf-8">
+	<title>CB MAFIA</title>
+	<!-- Mobile Specifc Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Stylessheets -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <!--Custom Embed for discord-->
+    <meta property="og:description" content="Compact source of information for MAFIA CB" />
+    <meta property="og:title" content="Welcome to MAFIA CB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://mafiacb.atwebpages.com/" />
+    <meta property="og:image" content="https://imgur.com/VfWyvF7.png" />
+    <meta name="theme-color" content="#ec0909">
+    <meta name="twitter:card" content="https://imgur.com/VfWyvF7.png">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="assets/img/MAFIAonTOP.png">
+  <!-- Stylessheets -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        A {text-decoration: none;} 
+        table {
+        border-collapse: collapse;
+        width: 100%;
+        }
+        #myDIV {
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        background-image: url("https://www.rensvandeschoot.com/wp-content/uploads/2018/06/Rectangle-Contacts-Background-Nested-Contact-Points-2326124.jpg");
+        background-color: rgb(205, 248, 255);
+        margin-top: 20px;}
+        .db {
+        background-color: #1276da;
+        border: none;
+        color: rgb(0, 0, 0);
+        padding: 6px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+        th, td {
+        text-align: left;
+        padding: 8px;
+        }
+        tr:nth-child(even){background-color: #f2f2f27c}
+        th {
+        background-color: #811818c5;
+        color: rgb(37, 37, 37);
+        }
+        td {
+        background-color: #811818c5;
+        color: rgb(145, 30, 30);
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        }
+        a.button1{
+        display:inline-block;
+        padding:0.35em 1.2em;
+        border:0.1em solid #000000;
+        margin:0 0.3em 0.3em 0;
+        border-radius:0.12em;
+        -webkit-box-shadow: 0px 0px 0px 0px #d86a11;
+        -moz-box-shadow: 0px 0px 0px 0px #d86a11;
+        box-shadow: 0px 0px 0px 0px #d86a11;
+        padding: 12px 30px;
+        border-radius: 500px;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family:Montserrat;
+        font-weight:300;
+        color:#000000;
+        text-align:center;
+        transition: all 0.2s;
+        }
+        a.button1:hover{
+        color:#ffffff;
+        background-color:#962525;
+        }
+        @media all and (max-width:30em){
+         a.button1{
+        display:block;
+        margin:0.4em auto;
+        }
+      }
+      a.button2{
+        display:inline-block;
+        padding:0.35em 1.2em;
+        border:0.1em solid #000000;
+        margin:0 0.3em 0.3em 0;
+        border-radius:0.12em;
+        -webkit-box-shadow: 0px 0px 0px 0px #d86a11;
+        -moz-box-shadow: 0px 0px 0px 0px #d86a11;
+        box-shadow: 0px 0px 0px 0px #d86a11;
+        padding: 12px 30px;
+        border-radius: 500px;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight:300;
+        color:#000000;
+        text-align:center;
+        transition: all 0.2s;
+        }
+        a.button2:hover{
+        color:#000000;
+        background-color:#26b119;
+        }
+        @media all and (max-width:30em){
+         a.button2{
+        display:block;
+        margin:0.4em auto;
+        }
+        }
+        .bouncy{
+        animation:bouncy 5s infinite linear;
+        position:relative;
+        }
+        @keyframes bouncy {
+        0%{top:0em}
+        40%{top:0em}
+        43%{top:-0.9em}
+        46%{top:0em}
+        48%{top:-0.4em}
+        50%{top:0em}
+        100%{top:0em;}
+        }
+        .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+      }
+
+      .modalContent {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 200%;
+        max-width: 1000px;
+      }
+
+      .modalClose {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .modalClose:hover,
+      .modalClose:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+
+<div class="header-container">
+  <div class="row justify-content-between">
+      <div class="col-1 "><img src="assets/img/MAFIAonTOP.png" width="120%" height="120%"></div>
+      <div class="col-1 "><a id="modalF" class="modalOpenBtn button2 bouncy" onclick="openModal('modalF')">HoF</a></div>
+      <div class="col-1 "><a href="https://discord.com/invite/YusYgJeW" target="_blank" class="button1 bouncy" style="animation-delay:0.07s">Discord</a></div>
+      <div class="col-1 "><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="button1 bouncy" style="animation-delay:0.07s">Trailer</a></div>
+      <div class="col-8 "></div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-4 "></div>
+    <div class="col-4 sazinies">REQUIRED TW CLASSES</div>
+    <div class="col-4 "></div>
+  </div>
+</div>
+<div class="container align-items-center"></div>
+  <div class="row">
+    <div class="col-5 "></div> 
+    <div class="col-3 obligats-lauks">* We only require these classes during Territory War, outside you may play anything else.</div> 
+    <div class="col-4 "></div> 
+  </div>
+</div>
+<div class="container">
+  <div class="col-1 "></div>
+    <div class="col-5">
+      <ul class="credentials">
+        <li><a class="credentials"></a><br><img src="https://imgur.com/ehIUSaC.jpg" width="100%" height="100%"></br></li>
+        <li><a class="help-text" style="white-space: pre-wrap;">
+          Shortsword Meta Class &#10;
+          Q:Shielded Charge 3 &#10;
+          E:shield throw 3 &#10;
+          R:Ironside 3 &#10;
+          T:Thunderstruck 3 &#10;
+          Combos:  Throw shield constantly off cooldown to slow enemies, shielded charge to chase down/knockdown or quick escape distance, ironside to be high defence for 8 seconds then Thunderstruck into mass crowd to make opening.</a>
+          <br></br>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-5 justify-content-start">
+      <ul class="credentials">
+        <li><a class="credentials"></a><br><img src="https://imgur.com/11vCSms.jpg" width="100%" height="100%"></br></li>
+        <li><a class="help-text" style="white-space: pre-wrap;">
+          Maul Meta Class &#10;
+          Q:Mighty Mjolnir 3 &#10;
+          E:Bone Breaker 3 &#10;
+          R:Ukko's Doom 3 &#10;
+          T:Strike and Grapple 3 &#10;
+          Combos: Mighty Mjolnir into Bonebreaker to shred heroes or units, Ukko's doom to break any CC you are under (Exception Poleaxe/DB), then use Strike and Grapple to take heroes/leaders off a point, throwing them off a wall or into friendly units.</a>
+          <br></br>
+        </li>
+      </ul>
+      <div class="col-1 "></div>
+    </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-4 "></div>
+    <div class="col-4 sazinies">Recommended Territory War Units</div>
+    <div class="col-4 "></div>
+  </div>
+</div>
+<div class="container ">
+  <div class="row justify-content-between">
+      <div class="col-2 " style="white-space: pre-wrap;"><a id="modalA" class="modalOpenBtn button2 bouncy " onclick="openModal('modalA')" >Winged + Stalwart &#10; Click Me</a></div>
+      <div class="col-2 " style="white-space: pre-wrap;"><a id="modalB" class="modalOpenBtn button2 bouncy " onclick="openModal('modalB')" style="animation-delay:0.07s ">Winged + IPG &#10; Click Me</a></div>
+      <div class="col-2 " style="white-space: pre-wrap;"><a id="modalC" class="modalOpenBtn button2 bouncy " onclick="openModal('modalC')" style="animation-delay:0.14s " >Winged + Berserker &#10; Click Me</a></div>
+      <div class="col-2 " style="white-space: pre-wrap;"><a id="modalD" class="modalOpenBtn button2 bouncy " onclick="openModal('modalD')" style="animation-delay:0.21s " >Unit 4 &#10; Click Me</a></div>
+      <div class="col-2 " style="white-space: pre-wrap;"><a id="modalD" class="modalOpenBtn button2 bouncy " onclick="openModal('modalD')" style="animation-delay:0.28s " >Unit 5 &#10; Click Me</a></div>
+      <div class="col-2 " style="white-space: pre-wrap;"><a id="modalD" class="modalOpenBtn button2 bouncy " onclick="openModal('modalD')" style="animation-delay:0.35s " >Unit 6 &#10; Click Me</a></div>
+  </div>
+</div>
+
+  <div id="modalA" class="modal">
+    <div class="modalContent">
+      <span class="modalClose"></span>
+      <div>
+        <img src="https://i.imgur.com/22kYsVe.png" width="100%" height="100%" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div id="modalB" class="modal">
+    <div class="modalContent">
+      <span class="modalClose"></span>
+      <div>
+        <img src="https://i.imgur.com/37hD7Ql.png" width="100%" height="100%" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div id="modalC" class="modal">
+    <div class="modalContent">
+      <span class="modalClose"></span>
+      <div>
+        <img src="https://i.imgur.com/37hD7Ql.png" width="100%" height="16%" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div id="modalD" class="modal">
+    <div class="modalContent">
+      <span class="modalClose"></span>
+      <div class="justify-content-center">
+        <iframe width="900px" height="600px"  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalF" class="modal">
+    <div class="modalContent">
+      <span class="modalClose"></span>
+      <div>
+        <img src="https://static.prod-my.games/chronos-public-eu-cb-prod/site/pages/hall%20of%20fame/Hall%20of%20Fame%20(S5).jpg" width="100%" alt="">
+      </div>
+    </div>
+  </div>
+
+<div class="container ">
+  <div class="row">
+    <div class="col-4 "></div>
+    <div class="col-4 "></div>
+    <div class="col-4 "></div>
+  </div>
+</div>
+
+<div class="container footer-two">
+  <div class="row">
+    <div class="col-4 "></div>
+    <div class="col-4 sazinies-white">>Fief Quest Bulletpoints<</div>
+    <div class="col-4 "></div>
+  </div>
+</div>
+
+<div class="container footer-two">
+  <div class="row sazinies">
+          <div class="container">
+            <div class="row">
+              <div class="col-3">
+                    <ul style="list-style: none;">
+                      <img src="https://imgur.com/Bg7FyLJ.jpg" width="110%" height="110%" alt="">
+                    </ul>
+                </div>
+                <div class="col-3 footer-two-text-big">
+                  <ul class="footer-menu">
+                    <li>*There is a limit of 20 Fief quests a week<br></br></li>
+                    <li>*Don't do all your Fief Quests<br></br></li>
+                    <li>*You gain prestige and xp from daily quests, completing them all early restricts your next daily quest completion<br></br></li>
+                    <li>*Don't go for the highest star quests<br></br></li>
+                    <li>*Some high star quests give less than lower star<br></br></li>
+                  </ul>
+                </div>
+                <div class="col-3 footer-two-text-big">
+                  <ul class="footer-menu">  
+                    <li>*Highly recommended to do Fief quests in Green/Blue territory <br></br></li>
+                    <li>*To see the colour, select "Diplomacy" bottom right<br></br></li>
+                    <li>*These quests grant the "Other" bonus upon completion<br></br></li>
+                    <li>*You can gain resources even if your wagon is full, they are stored in an "Resource Pile"<br></br></li>
+                    <li>*Trough Requisition Orders, it costs less bronze to "Gather"<br></br></li>
+                  </ul>
+                </div>  
+                <div class="col-3 footer-two-text-big">
+                  <ul class="footer-menu">
+                    <li>*For highest efficiency of time and resoruces, It's recommended to build 5 Serf units, and level them to 7<br></br></li>
+                    <li>*It's simple to accomplish in Bandit Raid or Expeditions<br></br></li>
+                    <li>*By going to gather with 5 serfs, you get the most resources<br></br></li>
+                    <li>*Resources reset when they are "low" or at 1PM CEST<br></br></li>
+                </ul>
+            </div>  
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="row footer-three">
+  <div class="col-2 jutify-cosntent-start" style="list-style: none;">Mafia CB 2021. All rights reserved.</div>
+  <div class="col-9"></div>
+  <div class="col-1 jutify-cosntent-end ">
+    <ul class="contacts"style="list-style: none;">
+      <li><a>Made by AjinLV</a></li>
+      <img src="https://i.imgur.com/y07xtKe.gif" width="20%" height="20%" alt="">
+    </ul>
+  </div>
+</div>
+<img src="assets/img/instagram.png" alt="">
+<script>
+var modals = document.getElementsByClassName("modal");
+var modalOpenBtn = document.getElementsByClassName("modalOpenBtn");
+var currentModal = null;
+
+function openModal(id) {
+  for (i = 0; i < modals.length; i++) {
+    if (modals[i].getAttribute('id') == id) {
+      currentModal = modals[i];
+      currentModal.style.display = "block";
+      break;
+    }
+  }
+}
+
+modalOpenBtn.onclick = function() {
+  let currentID = modalOpenBtn.getAttribute('id');
+  openModal(currentID);
+}
+
+window.onclick = function(event) {
+  if (event.target == currentModal || event.target.getAttribute('class') == 'modalClose') {
+    currentModal.style.display = "none";
+  }
+}
+  </script>
+
+</body>
+</html>
